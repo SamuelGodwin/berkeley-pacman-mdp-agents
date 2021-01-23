@@ -1,0 +1,5 @@
+default
+26/50 smallgrid, 50/50 smallmdpgrid, 10/50 mediumclassic, 13/50 another mediumclassic (iter is 2)
+
+with iter 20:
+13/50 mediumclassic

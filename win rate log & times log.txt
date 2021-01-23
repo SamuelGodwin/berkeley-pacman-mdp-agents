@@ -1,0 +1,126 @@
+SAM:
+
+------THE STRATEGIES COMPARISON------
+-VALUE ITERATION STRATEGY-
+mediumClassic:::::
+(gamma 0.5, no ghostneighbours, ghost -100, food 100, pacman -100, capsules 250, empty -1)
+value iteration strategy, out of 50 on mediumClassic (default setup no ghostneighbours):
+7/50, 0.14.
+10/50, 20%. avg score 312.94
+10/50, 20%. avg score 418.5
+9/50 0.18. avg score 398.94
+4/50, 0.08. avg score 180.38
+12/50, 0.24. avg score 453.72
+GAMMA 0.05:
+4/50, 0.08. avg score -441. 
+6/50, 0.12. avg score 150.98
+12/50, 0.24. avg score 354.56
+6/50, 0.12. avg score 229.8
+8/50, 0.16. avg score 238.78
+10/50, 0.20. avg score 342.7
+
+smallMDPGrid::::::
+wins very efficiently. (between 2 and 3 seconds with graphics)
+50/50, 100%. avg score 499.04
+250 runs...
+250/250, 100%. avg score 499.144.
+GAMMA 0.05:
+50/50, 100%. avg score 499.22
+250/250, 100%. avg score 499.328
+
+smallGrid::::::
+30/50, 60%.  avg score 95.44
+22/50, 0.44. avg score -64.44
+31/50, 0.62. avg score 116.02
+27/50, 0.54. avg score 34.52
+24/50, 0.48. avg score -27.44
+25/50. 0.50. avg score -7.4
+gamma 1, for 1000 runs: 385/1000 (0.39) avg score -116.683	Again: 392/1000 (0.39) avg score -109.703
+gamma 0.9, for 1000 runs: 409/1000 (0.41) avg score -92.799	Again: 400/1000 (0.40) avg score -101.765
+gamma 0.75, for 1000 runs: 475/1000 (0.47) avg score -27.72	Again: 482/1000 (0.48) avg score -20.548 
+gamma 0.5, for 1000 runs: 494/1000 (0.49) avg score -11.433	Again: 489/1000 (0.49) avg score -16.334
+-gamma 0.3, for 1000 runs: 526/1000 (0.53) avg score 20.658	Again: 490/1000 (0.49) avg score -15.815	Even more: 0.53, 0.51.
+gamma 0.25, for 1000 runs: 517/1000 (0.52) avg score 11.888. 	Again: 518/1000 (0.52) avg score 12.285
+-gamma 0.2, for 1000 runs: 499/1000 (0.50) avg score -6.911	Again: 522/1000 (0.52) avg score 16.12		Even more: 0.53 avg 22.586.
+gamma 0.1, for 1000 runs: 528/1000 (0.53) avg score 22.518.  	Again: 517/1000 (0.52) avg score 11.317
+--gamma 0.09		  535/1000 (0.54) avg score 29.703	Again: 515/1000 (0.52) avg score 9.343		Even more: 0.52, 0.49, 0.53
+--gamma 0.075		  511/1000 (0.51) avg score 5.557	Again: 513/1000 (0.51) avg score 6.979		Even more: 0.54, 0.54, 0.49
+-gamma 0.05, for 1000 runs: 553/1000 (0.55) avg score 48.045	Again: 542/1000 (0.54) avg score 36.751		Even more: 0.54, 0.53, 0.53
+---gamma 0.0375		  521/1000 (0.52) avg score 15.442	Again: 501/1000 (0.50) avg score -4.784		Even more: 0.54, 0.50, 0.50, 0.54
+--gamma 0.025		  540/1000 (0.54) avg score 34.557	Again: 536/1000 (0.54) avg score 30.883		Even more: 0.54, 0.54, 0.53
+gamma 0.01, for 1000 runs: 461/1000 (0.46) avg score -44.572 	Again: 480/1000 (0.48) avg score -25.786	Even more: 0.48, 0.46, 0.46
+gamma 0.001, for 1000 runs: 102/1000 (0.10) avg score -407.026	Again: 117/1000 (0.12) avg score -391.385
+gamma 0.0001, for 1000 runs: 111/1000 (0.11) avg score -398.162
+gamma 0.000001, for 1000 runs: 108/1000 (0.11) avg score -401.286.
+GAMMA 0.05:
+
+-NORMAL POLICY ITERATION STRATEGY-
+
+
+-MODIFIED POLICY ITERATION STRATEGY-
+
+	separate run~default @ gamma 0.5, no ghostneighbours, ghost -100, food 100, pacman -100, capsules 250, empty -1:
+	26/50 smallgrid, 50/50 smallmdpgrid, 10/50 mediumclassic, 13/50 another mediumclassic, 8/50 mediumClassic again (iter is 2)
+
+iter 20~iter would probably only change time
+mediumClassic:::::
+9/50, 0.18. avg score 240.76, 		12/50, 0.24. avg score 423.2
+seems slower than value iter with the same configs, will check this.
+GAMMA 0.05:
+6/50, 0.12. avg score 256.78,		10/50, 0.2. avg score 333.26	*this is definitely slower than value iteration of the same setup
+
+
+smallMDPGrid::::::
+50/50, avg score 499.0
+GAMMA 0.05:
+50/50, avg score 499.06
+
+smallGrid::::::
+21/50, 0.42. avg score -88.0
+19/50, 0.38. avg score -125.18
+30/50, 0.60. avg score 95.16
+20/50, 0.40. avg score -106.72
+17/50, 0.34. avg score -167.1
+19/50, 0.38. avg score -126.08
+GAMMA 0.05:
+24/50, 0.48. avg score -25.48
+31/50, 0.62. avg score 116.72
+24/50, 0.48. avg score -26.24
+23/50, 0.46. avg score -44.64
+24/50, 0.48. avg score -26.48
+30/50, 0.48. avg score 95.58
+
+
+
+---------------------------------
+
+
+-----THE GHOSTNEIGHBOURS COMPARISON-----
+SMALLGRID 1000 RUNS FOR GHOSTNEIGHBOURS TESTING - VALUE ITERATION STRATEGY
+gamma 0.05,  ghost -100, food 100, pacman -100, capsule 250, empty 1
+WITHOUT GHOSTNEIGHBOURS: 
+577/1000 (0.58) avg score 71.72, 	576/1000 (0.58),	554/1000 (0.55),	569/1000 (0.57)
+
+WITH GHOSTNEIGHBOURS, ghostneighbours having a reward of -10:			very similar to above. may want to do the same tests with POLICY.
+544/1000 (0.55) avg score 49.004,	562/1000 (0.56), 	553/1000 (0.55),	574/1000 (0.57)
+
+WITH GHOSTNEIGHBOURS, ghostneighbours having a reward same as ghosts, of -100:
+558/1000 (0.56) avg score 52.766,	560/1000 (0.56),	517/1000 (0.52)		566/1000 (0.56)		
+
+
+
+MITCH:
+default, with iter 20:
+13/50 mediumclassic
+
+
+with ghostneighbours, @ -99 reward:
+average across 3 runs, 9.66/50
+
+with ghostneighbours (default config gamma 0.5,  ghost -100, food 100, pacman -100, capsule 250, empty 1, mediumClassic)
+ghostneighbours:
+-99 reward: average across 3 runs, 9.66/50
+-100 reward: 11/50, 11/50
+-50 reward: 9/50, 7/50, 11/50
+-200 reward: 4/50, 7/50, 10/50 average 7
+-10 reward: 11/50, 18/50, 14/50 average 14.3/50
