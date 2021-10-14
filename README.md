@@ -1,4 +1,7 @@
 # ain-cw-2
+
+![](mdpAgents.gif)
+
 65.7
 The files that I wrote in exclusively is [mdpAgents.py]; the rest of the materials are from Berkeley's Cs188x AI course (so I claim no credit for them) and Simon Parsons.
 
